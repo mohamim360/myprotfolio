@@ -7,6 +7,7 @@ import ActiveSectionContextProvider from "@/context/active-section-context";
 import ThemeContextProvider from "@/context/theme-context";
 import ThemeSwitch from "@/components/theme-switch";
 import { Playfair_Display } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
@@ -49,7 +50,7 @@ export default function RootLayout({
 
             {/* Footer */}
           
-
+            <Toaster position="top-right" />
             {/* Theme Switch */}
             <div className="fixed bottom-4 right-4">
               <ThemeSwitch />

@@ -1,8 +1,10 @@
 "use client";
 
 import React from "react";
+import profile from "/public/1737815539158.png";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
@@ -22,15 +24,7 @@ const textVariant = {
   }),
 };
 
-const containerVariant = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.3,
-    },
-  },
-};
+
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
@@ -46,10 +40,36 @@ export default function Intro() {
         className="overflow-hidden"
         initial="hidden"
         animate="visible"
-        variants={containerVariant}
+        variants={textVariant}
       >
+        {/* Profile Image with Wave Animation */}
+        <div className="flex items-center justify-center mb-8 ">
+          <div className="relative">
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                type: "tween",
+                duration: 0.2,
+              }}
+            >
+              <Image
+                src={profile}
+                alt="Meheidi Hasan"
+                width="192"
+                height="192"
+                quality="95"
+                priority={true}
+                className="h-24 w-[5.5rem] rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+              />
+            </motion.div>
+
+          </div>
+        </div>
+
+        {/* Main Intro Text */}
         <motion.h1
-          className="px-4 text-4xl font-extrabold tracking-tight leading-tight sm:text-5xl mt-20 mb-10"
+          className="px-4 text-4xl font-extrabold tracking-tight leading-tight sm:text-5xl mt-16 mb-10"
           variants={textVariant}
           custom={1}
         >
@@ -70,6 +90,7 @@ export default function Intro() {
         </motion.h2>
       </motion.div>
 
+      {/* Buttons */}
       <motion.div
         className="flex flex-col sm:flex-row items-center justify-center gap-6 px-18 text-lg font-medium mt-16"
         initial={{ opacity: 0, y: 50 }}

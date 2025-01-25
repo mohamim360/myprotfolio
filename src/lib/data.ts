@@ -77,6 +77,8 @@ export const projectsData = [
       "Zod",
     ],
     imageUrl: dash,
+    githubLink: "https://github.com/mohamim360/academic-management",
+  
   },
   {
     title: "Hotel Booking System",
@@ -84,6 +86,8 @@ export const projectsData = [
       "This system has functionalities such as searching for hotels, sorting them by rating, viewing detailed information, booking rooms, and managing bookings.",
     tags: ["Next.js", "TypeScript", "NextAuth.js", "Tailwind", "MongoDB"],
     imageUrl: dash1,
+    githubLink: "https://github.com/mohamim360/Nextjs-Hotel-Booking-system",
+    liveLink: "https://nextjs-hotel-booking-system.vercel.app/",
   },
   {
     title: "Recipe Website",
@@ -91,6 +95,8 @@ export const projectsData = [
       "A recipe website with server-side rendering, user authentication, and responsive design for a seamless user experience.",
     tags: ["React", "Tailwind", "MongoDB", "Node.js", "Express"],
     imageUrl: dash2,
+    githubLink: "https://github.com/mohamim360/Recipe",
+    liveLink: "https://recipe-taupe-kappa.vercel.app/",
   },
   {
     title: "Notion Clone",
@@ -98,6 +104,8 @@ export const projectsData = [
       "The Notion Clone is a collaborative note-taking application built with Next.js, Firebase, and Liveblocks. It integrates features like real-time editing, user authentication, and a rich text editor.",
     tags: ["Next.js", "Tailwind", "liveblocks", "shadcn/ui", "firebase"],
     imageUrl: dash3,
+    githubLink: "https://github.com/mohamim360/Notion_Clone",
+    liveLink: "https://ai-notion-clone-hamim-five.vercel.app/",
   },
 ] as const;
 

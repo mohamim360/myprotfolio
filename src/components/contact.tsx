@@ -22,6 +22,7 @@ const Contact = () => {
       toast.error(error);
     } else {
       toast.success("Email sent successfully!");
+      (event.target as HTMLFormElement).reset();
     }
 
     setPending(false);
