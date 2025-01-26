@@ -38,7 +38,7 @@ export default function Project({
     >
       <section className="bg-gray-100 max-w-[48rem] border border-black/5 rounded-lg overflow-hidden pt-4 px-4 sm:pr-8 relative sm:h-[22rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20  ">
         {/* Hover Links */}
-        <div className="absolute inset-0 flex flex-col justify-center items-center gap-4 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity z-10">
+        <div className="absolute inset-0 flex flex-col justify-center items-center gap-4 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity z-10">
         <motion.div
               className="flex items-center justify-center gap-6 mt-4"
               initial={{ opacity: 0, y: 20 }}
@@ -47,7 +47,7 @@ export default function Project({
             >
               {githubLink && (
                 <a
-                  className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+                  className="bg-white py-4 px-6 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 hover:dark:text-white"
                   href={githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -58,7 +58,7 @@ export default function Project({
               )}
               {liveLink && (
                 <a
-                  className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+                  className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 hover:dark:text-white"
                   href={liveLink}
                   target="_blank"
                   rel="noopener noreferrer"
