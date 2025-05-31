@@ -20,7 +20,7 @@ export default function About() {
       <SectionHeading>About Me</SectionHeading>
 
       <p>
-        Hi, I&apos;m a web developer with a background in Computer Science and Engineering from the Institute of Science and Technology, Bangladesh. I have over a year of experience working with web technologies..
+        Hi, I&apos;m a web developer with a background in Computer Science and Engineering from the Institute of Science and Technology, Bangladesh. I have over a year of experience working with web technologies. I am passionate about building scalable and maintainable web applications. I am always eager to learn new technologies and improve my skills.
       </p>
 
     </motion.section>

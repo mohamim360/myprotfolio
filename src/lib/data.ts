@@ -85,7 +85,7 @@ export const projectsData = [
     description:
       "This system has functionalities such as searching for hotels, sorting them by rating, viewing detailed information, booking rooms, and managing bookings.",
     tags: ["Next.js", "TypeScript", "NextAuth.js", "Tailwind", "MongoDB"],
-    imageUrl: dash1,
+    imageUrl: dash2,
     githubLink: "https://github.com/mohamim360/Nextjs-Hotel-Booking-system",
     liveLink: "https://nextjs-hotel-booking-system.vercel.app/",
   },
@@ -94,7 +94,7 @@ export const projectsData = [
     description:
       "A recipe website with server-side rendering, user authentication, and responsive design for a seamless user experience.",
     tags: ["React", "Tailwind", "MongoDB", "Node.js", "Express"],
-    imageUrl: dash2,
+    imageUrl: dash1,
     githubLink: "https://github.com/mohamim360/Recipe",
     liveLink: "https://recipe-taupe-kappa.vercel.app/",
   },
