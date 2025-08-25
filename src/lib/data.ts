@@ -93,7 +93,7 @@ export const projectsData = [
     title: "Kanban Board Application",
     description:
       "Built an interactive Kanban board with drag-and-drop task management, editable tags, priority levels, dark mode, and persistent state management with localStorage.",
-    tags: ["Vue.js", "TailwindCSS","Vite"],
+    tags: ["Vue.js", "TailwindCSS","Vite", "JavaScript"],
     imageUrl: dash4,
     githubLink: "https://github.com/mohamim360/Vue-Kanban-Board",
     liveLink: "https://vue-kanban-board-weld.vercel.app/",
