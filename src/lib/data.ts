@@ -2,6 +2,7 @@ import dash from "/public/dash.PNG";
 import dash1 from "/public/Capture.PNG";
 import dash2 from "/public/Capture1.PNG";
 import dash3 from "/public/1.PNG";
+import dash4 from "/public/broad.PNG";
 
 export const links = [
   {
@@ -78,7 +79,6 @@ export const projectsData = [
     ],
     imageUrl: dash,
     githubLink: "https://github.com/mohamim360/academic-management",
-  
   },
   {
     title: "Hotel Booking System",
@@ -89,6 +89,16 @@ export const projectsData = [
     githubLink: "https://github.com/mohamim360/Nextjs-Hotel-Booking-system",
     liveLink: "https://nextjs-hotel-booking-system.vercel.app/",
   },
+  {
+    title: "Kanban Board Application",
+    description:
+      "Built an interactive Kanban board with drag-and-drop task management, editable tags, priority levels, dark mode, and persistent state management with localStorage.",
+    tags: ["Vue.js", "TailwindCSS","Vite"],
+    imageUrl: dash4,
+    githubLink: "https://github.com/mohamim360/Vue-Kanban-Board",
+    liveLink: "https://vue-kanban-board-weld.vercel.app/",
+  },
+
   {
     title: "Recipe Website",
     description:
