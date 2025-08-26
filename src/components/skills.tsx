@@ -36,6 +36,11 @@ const skillsBadges = [
     badge:
       "https://img.shields.io/badge/-React-61DBFB?style=for-the-badge&labelColor=black&logo=react&logoColor=61DBFB",
   },
+    {
+    name: "Vue.js",
+    badge:
+      "https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D",
+  },
   {
     name: "Next.js",
     badge:
