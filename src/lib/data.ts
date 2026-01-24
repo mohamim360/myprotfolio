@@ -3,6 +3,7 @@ import dash1 from "/public/Capture.PNG";
 import dash2 from "/public/Capture1.PNG";
 import dash3 from "/public/1.PNG";
 import dash4 from "/public/broad.PNG";
+import dash5 from "/public/h0.PNG";
 
 export const links = [
   {
@@ -97,6 +98,15 @@ export const projectsData = [
     imageUrl: dash4,
     githubLink: "https://github.com/mohamim360/Vue-Kanban-Board",
     liveLink: "https://vue-kanban-board-weld.vercel.app/",
+  },
+  {
+    title: "Car Renting Platform",
+    description:
+      "Developed a full-stack car renting platform with role-based access control (Admin, Driver, User), enabling users to rent cars, drivers to place bids, and admins to manage cars, users, rentals, and system analytics.",
+    tags: ["React", "Tailwind", "MongoDB", "Node.js", "Express", "JavaScript", "TypeScript", "Redux],
+    imageUrl: dash5,
+    githubLink: "https://github.com/mohamim360/car-renting-frontend",
+    liveLink: "https://car-renting-frontend.vercel.app/",
   },
 
   {
