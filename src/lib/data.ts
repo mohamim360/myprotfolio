@@ -103,7 +103,7 @@ export const projectsData = [
     title: "Car Renting Platform",
     description:
       "Developed a full-stack car renting platform with role-based access control (Admin, Driver, User), enabling users to rent cars, drivers to place bids, and admins to manage cars, users, rentals, and system analytics.",
-    tags: ["React", "Tailwind", "MongoDB", "Node.js", "Express", "JavaScript", "TypeScript", "Redux],
+    tags: ["React", "Tailwind", "MongoDB", "Node.js", "Express", "JavaScript", "TypeScript", "Redux"],
     imageUrl: dash5,
     githubLink: "https://github.com/mohamim360/car-renting-frontend",
     liveLink: "https://car-renting-frontend.vercel.app/",
