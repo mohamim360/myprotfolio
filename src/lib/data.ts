@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import healthCareImage from "/public/Project_images/ChatGPT Image Jul 6, 2026, 10_30_45 AM.png";
 import universityImage from "/public/Project_images/ChatGPT Image Jul 6, 2026, 10_47_20 AM.png";
 import notionImage from "/public/Project_images/ChatGPT Image Jul 6, 2026, 11_09_42 AM.png";
@@ -12,6 +13,14 @@ export {
   languagesData,
   contestsData,
 } from "./personal-info";
+=======
+import dash from "/public/dash.PNG";
+import dash1 from "/public/Capture.PNG";
+import dash2 from "/public/Capture1.PNG";
+import dash3 from "/public/1.PNG";
+import dash4 from "/public/broad.PNG";
+import dash5 from "/public/h0.PNG";
+>>>>>>> 7fde9594a6ca12b5a6a214f8e6ddd6a56ad77392
 
 export const links = [
   { name: "Home", hash: "#home" },
@@ -104,6 +113,7 @@ export const projectsData = [
   {
     title: "Car Renting Platform",
     description:
+<<<<<<< HEAD
       "Full-stack car rental platform with role-based access (Admin, Driver, User), allowing users to rent cars, drivers to bid, and admins to manage cars, users, rentals, and analytics.",
     tags: [
       "React",
@@ -127,6 +137,15 @@ export const projectsData = [
     githubLink: "https://github.com/mohamim360/Nextjs-Hotel-Booking-system",
     liveLink: "https://nextjs-hotel-booking-system.vercel.app/",
   },
+=======
+      "Developed a full-stack car renting platform with role-based access control (Admin, Driver, User), enabling users to rent cars, drivers to place bids, and admins to manage cars, users, rentals, and system analytics.",
+    tags: ["React", "Tailwind", "MongoDB", "Node.js", "Express", "JavaScript", "TypeScript", "Redux"],
+    imageUrl: dash5,
+    githubLink: "https://github.com/mohamim360/car-renting-frontend",
+    liveLink: "https://car-renting-frontend.vercel.app/",
+  },
+
+>>>>>>> 7fde9594a6ca12b5a6a214f8e6ddd6a56ad77392
   {
     title: "Recipe Website",
     description:
