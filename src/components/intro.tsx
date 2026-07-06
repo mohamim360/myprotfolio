@@ -138,7 +138,6 @@ export default function Intro() {
             </span>
           </motion.h1>
 
-<<<<<<< HEAD
           <motion.h2
             className="mt-5 text-lg font-semibold text-slate-700 dark:text-slate-200 sm:text-xl lg:text-2xl"
             variants={fadeUp}
@@ -146,16 +145,6 @@ export default function Intro() {
           >
             {personalInfo.title}
           </motion.h2>
-=======
-        <a
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-          href="/Mehedi-Hasan-resume.pdf"
-          download
-        >
-          Updated Resume{" "}
-          <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
-        </a>
->>>>>>> 7fde9594a6ca12b5a6a214f8e6ddd6a56ad77392
 
           <motion.p
             className="mx-auto mt-5 max-w-xl text-sm leading-7 text-gray-600 dark:text-gray-300 sm:text-base lg:mx-0 lg:text-lg lg:leading-8"
