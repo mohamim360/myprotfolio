@@ -2,3 +2,121 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --brand: 14 165 233;
+    --surface: 249 250 251;
+    --surface-elevated: 255 255 255;
+    --text-primary: 17 24 39;
+    --text-secondary: 75 85 99;
+    --border-subtle: 229 231 235;
+  }
+
+  .dark {
+    --surface: 17 24 39;
+    --surface-elevated: 31 41 55;
+    --text-primary: 243 244 246;
+    --text-secondary: 156 163 175;
+    --border-subtle: 55 65 81;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    background-color: rgba(59, 130, 246, 0.25);
+  }
+
+  body {
+    @apply min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(14,165,233,0.12),transparent_34rem),radial-gradient(circle_at_85%_8%,rgba(244,114,182,0.12),transparent_28rem),linear-gradient(180deg,#f8fafc_0%,#eef2ff_48%,#f8fafc_100%)] text-gray-950 antialiased dark:bg-[radial-gradient(circle_at_top_left,rgba(14,165,233,0.18),transparent_34rem),radial-gradient(circle_at_85%_8%,rgba(244,114,182,0.12),transparent_28rem),linear-gradient(180deg,#020617_0%,#0f172a_48%,#020617_100%)] dark:text-gray-50;
+  }
+}
+
+@layer components {
+  .borderBlack {
+    @apply border border-black/10 dark:border-white/10;
+  }
+
+  .glass-panel {
+    @apply border border-white/60 bg-white/75 shadow-soft backdrop-blur-2xl dark:border-white/10 dark:bg-slate-950/70;
+  }
+
+  .glass-card {
+    @apply rounded-2xl border border-white/70 bg-white/80 shadow-soft backdrop-blur-xl transition-all duration-300 dark:border-white/10 dark:bg-white/[0.06];
+  }
+
+  .glass-card-hover {
+    @apply hover:-translate-y-1 hover:border-sky-200/80 hover:bg-white/95 hover:shadow-card-hover dark:hover:border-sky-400/30 dark:hover:bg-white/[0.09];
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-slate-950 via-sky-900 to-slate-900 px-7 py-3 text-sm font-semibold text-white shadow-glow outline-none transition-all duration-300 hover:shadow-card focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 active:scale-95 dark:from-sky-500 dark:via-cyan-500 dark:to-teal-500 dark:text-slate-950;
+  }
+
+  .btn-primary:hover {
+    transform: scale(1.03);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/70 bg-white/75 px-7 py-3 text-sm font-semibold text-gray-800 shadow-soft outline-none backdrop-blur-xl transition-all duration-300 hover:bg-white hover:shadow-card focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 active:scale-95 dark:border-white/10 dark:bg-white/10 dark:text-gray-100 dark:hover:bg-white/15;
+  }
+
+  .btn-secondary:hover {
+    transform: scale(1.03);
+  }
+
+  .btn-icon {
+    @apply inline-flex items-center justify-center rounded-full border border-white/70 bg-white/75 p-3.5 text-gray-700 shadow-soft backdrop-blur-xl transition-all duration-300 hover:bg-white hover:text-sky-700 hover:shadow-card focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 active:scale-95 dark:border-white/10 dark:bg-white/10 dark:text-white/70 dark:hover:bg-white/15 dark:hover:text-white;
+  }
+
+  .btn-icon:hover {
+    transform: scale(1.08);
+  }
+
+  .input-field {
+    @apply w-full rounded-xl border border-white/70 bg-white/85 px-4 py-3.5 text-gray-900 shadow-soft outline-none transition-all duration-200 placeholder:text-gray-400 focus:border-sky-300 focus:bg-white focus:ring-4 focus:ring-sky-500/10 dark:border-white/10 dark:bg-white/10 dark:text-white dark:placeholder:text-white/40 dark:focus:bg-white/15;
+  }
+
+  .skill-pill {
+    @apply inline-flex items-center rounded-full border border-sky-200/80 bg-sky-50/80 px-3.5 py-1.5 text-xs font-semibold tracking-wide text-sky-700 transition-all duration-200 hover:border-sky-300 hover:bg-white dark:border-sky-400/20 dark:bg-sky-400/10 dark:text-sky-200;
+  }
+
+  .skill-pill:hover {
+    transform: scale(1.05);
+  }
+
+  .section-container {
+    @apply w-full max-w-[54rem] scroll-mt-28 px-4 sm:px-6 lg:px-0;
+  }
+
+  /* Vertical timeline overrides */
+  .vertical-timeline {
+    @apply w-full !p-0;
+  }
+
+  .vertical-timeline::before {
+    @apply !left-[1.15rem] sm:!left-2;
+  }
+
+  .vertical-timeline-element-content {
+    @apply !shadow-soft;
+  }
+
+  .vertical-timeline-element-date {
+    @apply !opacity-100;
+  }
+
+  @media only screen and (max-width: 1169px) {
+    .vertical-timeline-element-content {
+      @apply !ml-10;
+    }
+  }
+
+  @media only screen and (min-width: 1170px) {
+    .vertical-timeline.vertical-timeline--two-columns
+      .vertical-timeline-element-content {
+      @apply !w-[44%];
+    }
+  }
+}

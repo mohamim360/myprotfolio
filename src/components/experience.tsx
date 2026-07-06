@@ -3,113 +3,88 @@
 import React from "react";
 import SectionHeading from "./section-heading";
 import { useSectionInView } from "@/lib/hooks";
-import { useTheme } from "@/context/theme-context";
 import { motion } from "framer-motion";
 import Image from "next/image";
-// Make sure to add the logo file
 
 export default function Experience() {
   const { ref } = useSectionInView("Experience");
-  const { theme } = useTheme();
 
   return (
     <section
       id="experience"
       ref={ref}
-      className="scroll-mt-28 mb-28 sm:mb-40 flex justify-center items-center px-6"
+      className="section-container mb-28 w-full scroll-mt-28 sm:mb-40"
     >
-      <div className="w-full max-w-4xl">
-        <SectionHeading>Experience</SectionHeading>
+      <SectionHeading>Experience</SectionHeading>
 
-        {/* Itransition Group Experience */}
-        <motion.div
-          className={`mt-6 mx-auto p-6 rounded-3xl shadow-xl transition-all ${theme === "light"
-              ? "bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg border border-gray-200"
-              : "bg-gray-900 bg-opacity-80 backdrop-filter backdrop-blur-lg border border-gray-700"
-            }`}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-        >
-          <div className="flex flex-col sm:flex-row gap-4">
-            <div className="flex-shrink-0">
+      <motion.div
+        className="glass-card glass-card-hover mx-auto p-5 shadow-card sm:p-8"
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-60px" }}
+        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <div className="flex flex-col gap-5 sm:flex-row">
+          <div className="flex-shrink-0">
+            <div className="inline-flex overflow-hidden rounded-xl border border-white/70 bg-white p-1.5 shadow-soft dark:border-white/10 dark:bg-slate-900">
               <Image
                 src="/images.jpeg"
                 alt="Itransition Group Logo"
-                width={60}
-                height={60}
+                width={56}
+                height={56}
                 className="rounded-lg object-contain"
               />
             </div>
-            <div>
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                <h3 className="text-xl font-medium text-gray-800 dark:text-gray-100">
-                  Frontend Developer Intern
-                </h3>
-                <span className="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">
-                  Mar 2025 - May 2025 · 3 mos
+          </div>
+          <div className="flex-1 text-left">
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 sm:text-xl">
+                Frontend Developer Intern
+              </h3>
+              <span className="inline-flex w-fit rounded-full bg-sky-500/10 px-3 py-1 text-xs font-semibold text-sky-700 dark:text-sky-200">
+                Mar 2025 - May 2025
+              </span>
+            </div>
+            <h4 className="mt-1 text-sm font-medium text-gray-700 dark:text-gray-300 sm:text-base">
+              Itransition Group - Remote (Bangladesh)
+            </h4>
+            <ul className="mt-4 space-y-2.5 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
+              <li className="flex gap-2.5">
+                <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-sky-500" />
+                Completed multiple frontend tasks under strict guidelines and
+                deadlines with regular mentoring sessions.
+              </li>
+              <li className="flex gap-2.5">
+                <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald-500" />
+                Built and defended a full-featured form-based web application
+                using React, TypeScript, Node.js, Prisma, PostgreSQL,
+                Cloudinary, and Bootstrap.
+              </li>
+              <li className="flex gap-2.5">
+                <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-pink-500" />
+                Enhanced the final project with additional features and
+                Dockerized the application for deployment.
+              </li>
+            </ul>
+            <div className="mt-5 flex flex-wrap gap-2">
+              {[
+                "React",
+                "TypeScript",
+                "Node.js",
+                "Prisma",
+                "PostgreSQL",
+                "Cloudinary",
+                "Bootstrap",
+                "Docker",
+              ].map((skill) => (
+                <span key={skill} className="skill-pill !text-[0.7rem]">
+                  {skill}
                 </span>
-              </div>
-              <h4 className="text-lg text-gray-700 dark:text-gray-300 mb-2">
-                Itransition Group · Remote (Bangladesh)
-              </h4>
-              <ul className="mt-2 text-gray-600 dark:text-gray-300 list-disc list-inside space-y-1">
-                <li>Completed an internship focused on advanced frontend development.</li>
-                <li>Worked on multiple tasks under strict technical criteria and deadlines, receiving continuous guidance through mentoring sessions</li>
-                <li>Developed a feature-rich web application as a final project (customizable forms app). Defended the project through live presentations and code walkthroughs.</li>
-                <li>Post-presentation, continued enhancing the app by integrating additional features.</li>
-              </ul>
-              <div className="mt-3 flex flex-wrap gap-2">
-                <span className="px-3 py-1 text-xs rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
-                  Frontend Development
-                </span>
-                <span className="px-3 py-1 text-xs rounded-full bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
-                  React
-                </span>
-                <span className="px-3 py-1 text-xs rounded-full bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200">
-                  JavaScript
-                </span>
-                <span className="px-3 py-1 text-xs rounded-full bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-200">
-                  Prisma
-                </span>
-                <span className="px-3 py-1 text-xs rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">
-                  PostgreSQL
-                </span>
-                <span className="px-3 py-1 text-xs rounded-full bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">
-                  Bootstrap
-                </span>
-              </div>
+              ))}
             </div>
           </div>
-        </motion.div>
-
-        {/* Seeking Opportunities Card
-        <motion.div
-          className={`mt-6 mx-auto p-10 rounded-3xl shadow-xl transition-all ${
-            theme === "light"
-              ? "bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg border border-gray-200"
-              : "bg-gray-900 bg-opacity-80 backdrop-filter backdrop-blur-lg border border-gray-700"
-          }`}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-        >
-          <h3 className="text-xl font-medium text-gray-800 dark:text-gray-100 mb-2">
-            Seeking Opportunities
-          </h3>
-          <h4 className="text-lg text-gray-500 dark:text-gray-400 mb-4">
-            Ready to Contribute and Grow
-          </h4>
-          <p className="text-base text-gray-600 dark:text-gray-300 leading-relaxed">
-            I am a recent university graduate actively seeking opportunities to 
-            contribute to innovative projects while growing my skill set. 
-            I am eager to collaborate with teams that value creativity and 
-            technical proficiency. Let&#39;s work together to achieve great things.
-          </p>
-        </motion.div> */}
-      </div>
+        </div>
+      </motion.div>
     </section>
   );
 }
